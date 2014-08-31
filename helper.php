@@ -8,7 +8,7 @@ abstract class mod_restaurantsHelper
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 
-		$query->select('neighborhood, neighborhood_id, hex_color_code, restaurant, address1, zip, website, phone, blurb, display_logo');
+		$query->select('neighborhood, neighborhood_id, hex_text, hex_background, restaurant, address1, zip, website, phone, blurb, display_logo');
 		$query->from('#__rl_v_restaurant_list');
 		$query->order('sort_order ASC, restaurant ASC');
 		$db->setQuery($query, 0 /*, $params->get('count', 5)*/);
@@ -23,7 +23,7 @@ abstract class mod_restaurantsHelper
 			return false;
 		}
 
-		foreach ($results as $k => $result)
+		foreach ($results as $k => $result)	
 		{
 			$results[$k] = new stdClass;
 			$results[$k]-> neighborhood = htmlspecialchars( $result->neighborhood );
