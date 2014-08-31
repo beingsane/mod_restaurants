@@ -27,7 +27,8 @@ abstract class mod_restaurantsHelper
 		{
 			$results[$k] = new stdClass;
 			$results[$k]-> neighborhood = htmlspecialchars( $result->neighborhood );
-			$results[$k]-> color = htmlspecialchars( $result->hex_color_code );
+			$results[$k]-> bgcolor = htmlspecialchars( $result->hex_background );
+			$results[$k]-> color = htmlspecialchars( $result->hex_text);
 			$results[$k]-> nid = (int)$result->neighborhood_id;
 			$results[$k]-> restaurant = htmlspecialchars( $result->restaurant );
 			$results[$k]-> address1 = htmlspecialchars( $result->address1 );

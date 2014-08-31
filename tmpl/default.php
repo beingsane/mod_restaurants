@@ -3,9 +3,6 @@ defined('_JEXEC') or die;
 
 ?>
 <div class="restaurants<?php echo $moduleclass_sfx ?>">
-	<div class="well well-small">
-		<h4>Our mission is to create collaborative working relationships between Pittsburgh business owners and the local vegan community, in order to increase the visibility and accessibility of vegan dining options.</h4>
-	</div>
 	<?php $currentNeighborhoodId = -1; ?>
 	<div id="neighborhoods-acc" class="accordion">
 		<?php foreach($list as $item) : ?>
@@ -20,7 +17,7 @@ defined('_JEXEC') or die;
 				<?php endif; ?>
 				<div class="accordion-group">
 					<div class="accordion-heading">
-						<a class="accordion-toggle neighborhood" style="background-color: #<?php echo $item->color ?>;" href="#collapse<?php echo $item->color ?>" data-toggle="collapse" data-parent="#neighborhoods-acc"> <?php echo $item->neighborhood ?> </a>
+						<a class="accordion-toggle neighborhood" style="background-color: #<?php echo $item->bgcolor ?>; color: #<?php echo $item->color ?>;" href="#collapse<?php echo $item->color ?>" data-toggle="collapse" data-parent="#neighborhoods-acc"> <?php echo $item->neighborhood ?> </a>
 					</div>
 					<div id="collapse<?php echo $item->color ?>" class="accordion-body collapse">
 						<div class="accordion-inner">
