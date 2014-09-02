@@ -8,13 +8,17 @@ defined('_JEXEC') or die;
 		<?php foreach($list as $item) : ?>
 			<?php if($item->nid != $currentNeighborhoodId): ?> 
 				<!--start a new neighborhood-->
-				<?php $currentNeighborhoodId = $item->nid; ?>
-				<?php if($item->nid != -1): ?> 
+				<?php if($currentNeighborhoodId != -1): ?> 
 					<!--not the first neighborhood so close the previous accordion-group, accordion-body, and accordion-inner-->
 							</div>
 						</div>
 					</div>
 				<?php endif; ?>
+				
+				<!--set the current neighborhood to this item-->
+				<?php $currentNeighborhoodId = $item->nid; ?>
+				
+				<!--start the new accordion group for this neighborhood-->
 				<div class="accordion-group">
 					<div class="accordion-heading">
 						<a class="accordion-toggle neighborhood" style="background-color: #<?php echo $item->bgcolor ?>; color: #<?php echo $item->color ?>;" href="#collapse<?php echo $item->bgcolor ?>" data-toggle="collapse" data-parent="#neighborhoods-acc"> <?php echo $item->neighborhood ?> </a>
