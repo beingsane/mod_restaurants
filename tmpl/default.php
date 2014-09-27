@@ -29,14 +29,14 @@ defined('_JEXEC') or die;
 			
 			<div class="row-fluid bottom-dotted">
 				<!--
-					todo: bottom-dotted
 					todo: blank/missing fields
 					todo: acute e (as in cafe)
 					done: hover effects
 					done: slide close/slide open
+					done: bottom-dotted
 				-->
 				<div class="span2 restaurant-name<?php if($item->display_logo == 1): ?> display-logo<?php endif; ?>"><?php echo $item->restaurant ?></div>
-				<div class="span2"><a href="<?php echo $item->website; ?>" target="_blank"><?php echo $item->website; ?></a><br /> <?php echo $item->address1; ?></div>
+				<div class="span2"><a href="<?php echo $item->website; ?>" target="_blank"><?php echo $item->website; ?></a><br /> <?php echo $item->address1; ?>,&nbsp;<?php echo $item->zip; ?></div>
 				<div class="span7 offset1"><?php echo $item->blurb; ?></div>
 			</div>
 			
