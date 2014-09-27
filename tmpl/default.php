@@ -38,7 +38,15 @@ defined('_JEXEC') or die;
 				<div class="span2 restaurant-name<?php if($item->display_logo == 1): ?> display-logo<?php endif; ?>"><?php echo $item->restaurant ?></div>
 				<div class="span2">
 					<?php if(isset($item->website) && !(trim($item->website)==='')): ?>
-						<a href="<?php echo $item->website; ?>" target="_blank"><?php echo $item->website; ?></a><br /><?php endif; ?> <?php echo $item->address1; ?>,&nbsp;<?php echo $item->zip; ?></div>
+						<a href="<?php echo $item->website; ?>" target="_blank"><?php echo $item->website; ?></a><br />
+					<?php endif; ?>
+					<?php if(isset($item->phone) && !(trim($item->phone)==='')): ?>
+						<?php echo $item->phone; ?><br />
+					<?php endif; ?>
+					<?php if(isset($item->address1) && !(trim($item->address1)==='')): ?>
+						<?php echo $item->address1; ?>,&nbsp;<?php echo $item->zip; ?>
+					<?php endif; ?>
+				</div>
 				<div class="span7 offset1"><?php echo $item->blurb; ?></div>
 			</div>
 			
