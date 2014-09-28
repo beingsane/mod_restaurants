@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 function format_phone($phone)
 {
 	preg_match( '/^(\d{3})(\d{3})(\d{4})$/', $phone,  $matches );
-	$result = $matches[1] . '-' .$matches[2] . '-' . $matches[3];
+	$result = $matches[1] . '.' .$matches[2] . '.' . $matches[3];
     return $result;
 }
 ?>
