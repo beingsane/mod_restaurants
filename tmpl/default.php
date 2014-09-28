@@ -1,6 +1,12 @@
 <?php
 defined('_JEXEC') or die;
 
+function format_phone($phone)
+{
+	preg_match( '/^(\d{3})(\d{3})(\d{4})$/', $phone,  $matches );
+	$result = $matches[1] . '-' .$matches[2] . '-' . $matches[3];
+    return $result;
+}
 ?>
 <div class="restaurants<?php echo $moduleclass_sfx ?>">
 	<?php $currentNeighborhoodId = -1; ?>
@@ -41,7 +47,7 @@ defined('_JEXEC') or die;
 						<a href="<?php echo $item->website; ?>" target="_blank"><?php echo $item->website; ?></a><br />
 					<?php endif; ?>
 					<?php if(isset($item->phone) && !(trim($item->phone)==='')): ?>
-						<?php echo $item->phone; ?><br />
+						<?php echo format_phone($item->phone); ?><br />
 					<?php endif; ?>
 					<?php if(isset($item->address1) && !(trim($item->address1)==='')): ?>
 						<?php echo $item->address1; ?>,&nbsp;<?php echo $item->zip; ?>
