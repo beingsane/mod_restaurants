@@ -30,12 +30,12 @@ abstract class mod_restaurantsHelper
 			$results[$k]-> bgcolor = htmlspecialchars( $result->hex_background );
 			$results[$k]-> color = htmlspecialchars( $result->hex_text);
 			$results[$k]-> nid = (int)$result->neighborhood_id;
-			$results[$k]-> restaurant = htmlspecialchars( $result->restaurant );
+			$results[$k]-> restaurant = htmlspecialchars( $result->restaurant,(ENT_COMPAT | ENT_HTML401),ini_get("default_charset"), false );
 			$results[$k]-> address1 = htmlspecialchars( $result->address1 );
 			$results[$k]-> zip = htmlspecialchars( $result->zip );
 			$results[$k]-> website = htmlspecialchars( $result->website );
 			$results[$k]-> phone = htmlspecialchars( $result->phone );
-			$results[$k]-> blurb = htmlspecialchars( $result->blurb );
+			$results[$k]-> blurb = htmlspecialchars( $result->blurb,(ENT_COMPAT | ENT_HTML401),ini_get("default_charset"), false );
 			$results[$k]-> display_logo = (int)$result->display_logo;
 		}
 
