@@ -35,7 +35,8 @@ abstract class mod_restaurantsHelper
 			$results[$k]-> zip = htmlspecialchars( $result->zip );
 			$results[$k]-> website = htmlspecialchars( $result->website );
 			$results[$k]-> phone = htmlspecialchars( $result->phone );
-			$results[$k]-> blurb = htmlspecialchars( $result->blurb,(ENT_COMPAT | ENT_HTML401),ini_get("default_charset"), false );
+			//$results[$k]-> blurb = htmlspecialchars( $result->blurb,(ENT_COMPAT | ENT_HTML401),ini_get("default_charset"), false );
+			$results[$k]-> blurb = $result->blurb;
 			$results[$k]-> display_logo = (int)$result->display_logo;
 		}
 
