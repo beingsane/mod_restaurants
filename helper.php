@@ -7,8 +7,8 @@ abstract class mod_restaurantsHelper
 	{
 		// get a jquery document object
 		$document	= JFactory::getDocument();
-		
-		if(file_exists(JPATH_BASE.'/templates/'.$template.'/html/mod_restaurants/js/default.js'))
+	/*	
+	if(file_exists(JPATH_BASE.'/templates/'.$template.'/html/mod_restaurants/js/default.js'))
 		{
 			$document->addScript(JURI::root().'templates/'.$template.'/html/mod_restaurants/js/default.js');	
 		}
@@ -19,6 +19,7 @@ abstract class mod_restaurantsHelper
 			}
 			$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/default.js');	
 		}
+	*/
 	if(file_exists(JPATH_BASE.'/templates/'.$template.'/html/mod_restaurants/css/styles.css'))
 		{
 			$document->addStyleSheet(JURI::root().'templates/'.$template.'/html/mod_restaurants/css/style.css');	
