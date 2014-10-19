@@ -11,7 +11,7 @@
     <authorUrl>itdoneeasy.com</authorUrl>
     <copyright>Copyright (C) 2014 VeganPittsburgh.org. All rights reserved.</copyright>
     <license>GNU GPL</license>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
 	<description>Displays a pretty restaurant list from the database</description>
 	<files>
 		<filename module="mod_restaurants">mod_restaurants.php</filename>
