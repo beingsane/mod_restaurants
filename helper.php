@@ -13,10 +13,6 @@ abstract class mod_restaurantsHelper
 			$document->addScript(JURI::root().'templates/'.$template.'/html/mod_restaurants/js/default.js');	
 		}
 		else{
-			$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/btbase64.min.js');
-			if($params->get('enable-custom-infobox')){
-				$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/infobox.js');		
-			}
 			$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/default.js');	
 		}
 	
