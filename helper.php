@@ -3,6 +3,31 @@ defined('_JEXEC') or die;
 
 abstract class mod_restaurantsHelper
 {
+	public static function getHead($params, $module)
+	{
+		// get a jquery document object
+		$document	= JFactory::getDocument();
+		
+		if(file_exists(JPATH_BASE.'/templates/'.$template.'/html/mod_restaurants/js/default.js'))
+		{
+			$document->addScript(JURI::root().'templates/'.$template.'/html/mod_restaurants/js/default.js');	
+		}
+		else{
+			$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/btbase64.min.js');
+			if($params->get('enable-custom-infobox')){
+				$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/infobox.js');		
+			}
+			$document->addScript(JURI::root().'modules/mod_restaurants/tmpl/js/default.js');	
+		}
+	if(file_exists(JPATH_BASE.'/templates/'.$template.'/html/mod_restaurants/css/styles.css'))
+		{
+			$document->addStyleSheet(JURI::root().'templates/'.$template.'/html/mod_restaurants/css/style.css');	
+		}
+		else{
+			$document->addStyleSheet(JURI::root().'modules/mod_restaurants/tmpl/css/style.css');
+		}
+	}
+	
 	public static function getList(&$params)
 	{
 		$db = JFactory::getDbo();
