@@ -13,6 +13,13 @@
     <license>GNU GPL</license>
     <version>1.1.2</version>
 	<description>Displays a pretty restaurant list from the database</description>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
 	<files>
 		<filename module="mod_restaurants">mod_restaurants.php</filename>
 		<filename>helper.php</filename>
