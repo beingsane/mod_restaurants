@@ -6,6 +6,8 @@ abstract class mod_restaurantsHelper
 	public static function getHead($params, $module)
 	{
 		// get a jquery document object
+		$mainframe = JFactory::getApplication();
+		$template = $mainframe->getTemplate();
 		$document	= JFactory::getDocument();
 		JHtml::_('jquery.framework');
 		
